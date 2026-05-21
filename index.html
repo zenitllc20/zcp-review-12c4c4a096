@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Un coach che guarda il tuo processo | Live Zenit 4 giugno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: oklch(13% 0.006 72);
+  --ink-2: oklch(17% 0.008 72);
+  --ink-3: oklch(22% 0.01 72);
+  --paper: oklch(93% 0.01 72);
+  --paper-soft: oklch(78% 0.012 72);
+  --muted: oklch(66% 0.018 72);
+  --faint: oklch(48% 0.015 72);
+  --gold: oklch(72% 0.105 78);
+  --gold-soft: oklch(82% 0.09 80);
+  --gold-deep: oklch(58% 0.085 73);
+  --amber-wash: oklch(78% 0.075 78 / 0.12);
+  --line: oklch(92% 0.01 72 / 0.11);
+  --line-gold: oklch(78% 0.09 78 / 0.28);
+  --bad: oklch(65% 0.14 28);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--ink); scroll-behavior: smooth; }
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background:
+    radial-gradient(circle at 9% 0%, oklch(70% 0.09 78 / 0.20), transparent 33rem),
+    radial-gradient(circle at 86% 12%, oklch(63% 0.07 52 / 0.13), transparent 32rem),
+    linear-gradient(135deg, var(--ink) 0%, oklch(15% 0.008 72) 48%, oklch(11% 0.005 72) 100%);
+  color: var(--paper);
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.fullSection { padding: 0 !important; }
+.fullSection > .inner,
+.c-row > .inner,
+.c-column > .vertical.inner { max-width: 100% !important; width: 100% !important; padding: 0 !important; }
+.c-custom-code, .custom-code-container { width: 100% !important; max-width: 100% !important; padding: 0 !important; overflow: visible !important; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+
+.page {
+  position: relative;
+  min-height: 100dvh;
+}
+.page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.23;
+  background-image:
+    linear-gradient(oklch(90% 0.01 72 / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(90% 0.01 72 / 0.04) 1px, transparent 1px);
+  background-size: 74px 74px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 82%);
+}
+.wrap {
+  width: min(1220px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.top-strip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--line);
+  background: oklch(12% 0.006 72 / 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.top-strip-inner {
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 0 18px;
+}
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--gold-soft);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+.mark-box {
+  width: 31px;
+  height: 31px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold-soft));
+  color: var(--ink);
+  letter-spacing: 0;
+  font-size: 15px;
+}
+.top-meta {
+  display: none;
+  align-items: center;
+  justify-self: end;
+  gap: 11px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 0 oklch(72% 0.105 78 / 0.4);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 oklch(72% 0.105 78 / 0.38); }
+  70% { box-shadow: 0 0 0 10px oklch(72% 0.105 78 / 0); }
+  100% { box-shadow: 0 0 0 0 oklch(72% 0.105 78 / 0); }
+}
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border: 1px solid var(--line-gold);
+  border-radius: 999px;
+  padding: 0 15px;
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: oklch(72% 0.105 78 / 0.11);
+}
+
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  padding: 94px 0 42px;
+  position: relative;
+}
+.hero-grid {
+  display: block;
+  position: relative;
+}
+.hero-copy {
+  padding-top: clamp(36px, 7vh, 88px);
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+}
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  border: 1px solid var(--line-gold);
+  border-radius: 999px;
+  padding: 7px 13px;
+  color: var(--gold-soft);
+  background: var(--amber-wash);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  margin-top: 20px;
+  max-width: 1120px;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-size: clamp(58px, 9.3vw, 134px);
+  line-height: 0.88;
+  letter-spacing: 0;
+}
+.hero h1 span {
+  color: var(--gold-soft);
+  font-style: italic;
+}
+.hero-lead {
+  margin-top: 24px;
+  max-width: 640px;
+  color: var(--paper-soft);
+  font-size: clamp(17px, 1.7vw, 22px);
+  line-height: 1.55;
+}
+.hero-lead strong { color: var(--paper); font-weight: 800; }
+.hero-actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.primary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold), var(--gold-soft));
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  box-shadow: 0 18px 52px oklch(62% 0.09 76 / 0.28);
+  transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease);
+}
+.primary-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 66px oklch(62% 0.09 76 / 0.37);
+}
+.secondary-note {
+  color: var(--faint);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.hero-benefits {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 740px;
+}
+.hero-benefit {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  min-height: 128px;
+  overflow: hidden;
+  background: oklch(15% 0.008 72 / 0.78);
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+}
+.benefit-visual {
+  width: 118px;
+  height: 96px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: oklch(10% 0.006 72);
+  border: 1px solid oklch(92% 0.01 72 / 0.08);
+}
+.benefit-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.benefit-visual.icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.benefit-copy strong {
+  display: block;
+  color: var(--paper);
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 900;
+  line-height: 1.04;
+}
+.benefit-copy span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.proof-stack {
+  position: relative;
+  min-height: 520px;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+}
+.proof-collage {
+  position: relative;
+  height: min(72vh, 680px);
+  min-height: 520px;
+}
+.proof-photo {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid oklch(92% 0.01 72 / 0.12);
+  background: var(--ink-2);
+  box-shadow: 0 28px 70px oklch(0% 0 0 / 0.48);
+}
+.proof-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.proof-photo.main {
+  width: min(72vw, 390px);
+  aspect-ratio: 9 / 16;
+  right: 0;
+  top: 18px;
+  border-radius: 24px;
+  transform: rotate(3deg);
+}
+.proof-photo.side-a {
+  width: min(56vw, 280px);
+  aspect-ratio: 9 / 16;
+  left: 0;
+  bottom: 8px;
+  border-radius: 20px;
+  transform: rotate(-8deg);
+  opacity: 0.92;
+}
+.proof-photo.side-b {
+  display: none;
+  width: 220px;
+  aspect-ratio: 9 / 16;
+  right: 260px;
+  bottom: 38px;
+  border-radius: 20px;
+  transform: rotate(-2deg);
+  opacity: 0.78;
+}
+.floating-ticket {
+  position: absolute;
+  left: 14px;
+  top: 30px;
+  max-width: 255px;
+  border: 1px solid var(--line-gold);
+  border-radius: 18px;
+  padding: 16px;
+  background: oklch(15% 0.008 72 / 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 22px 55px oklch(0% 0 0 / 0.38);
+}
+.ticket-label {
+  color: var(--gold-soft);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.ticket-text {
+  margin-top: 7px;
+  color: var(--paper);
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+.ticket-small {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.quick-form {
+  margin-top: 18px;
+  border: 1px solid var(--line-gold);
+  border-radius: 24px;
+  background:
+    linear-gradient(160deg, oklch(22% 0.01 72 / 0.96), oklch(14% 0.006 72 / 0.98)),
+    var(--ink-2);
+  box-shadow: 0 28px 80px oklch(0% 0 0 / 0.52);
+  overflow: hidden;
+}
+.form-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.form-top h2 {
+  font-size: 17px;
+  line-height: 1.22;
+  font-weight: 900;
+}
+.form-chip {
+  flex: 0 0 auto;
+  border: 1px solid var(--line-gold);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--gold-soft);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.quick-form form { padding: 18px 20px 20px; }
+.field { margin-bottom: 12px; }
+.lbl {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  border: 1px solid oklch(92% 0.01 72 / 0.12);
+  border-radius: 12px;
+  outline: none;
+  background: oklch(11% 0.006 72 / 0.76);
+  color: var(--paper);
+  padding: 14px 14px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: border-color 0.16s var(--ease), box-shadow 0.16s var(--ease), background 0.16s var(--ease);
+}
+input:focus {
+  border-color: oklch(76% 0.11 78 / 0.72);
+  box-shadow: 0 0 0 4px oklch(76% 0.11 78 / 0.10);
+  background: oklch(13% 0.006 72 / 0.95);
+}
+.hint {
+  margin-top: 6px;
+  color: var(--faint);
+  font-size: 11px;
+}
+.legal-row {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: start;
+  margin: 15px 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.48;
+}
+.legal-row input {
+  margin-top: 2px;
+  accent-color: oklch(72% 0.105 78);
+}
+.legal-row a { color: var(--gold-soft); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.submit-btn {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold), var(--gold-soft));
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.submit-btn:disabled {
+  opacity: 0.58;
+  cursor: wait;
+}
+.form-status {
+  min-height: 18px;
+  margin-top: 10px;
+  color: var(--bad);
+  font-size: 12px;
+  line-height: 1.42;
+}
+.form-bottom-note {
+  margin-top: 11px;
+  color: var(--faint);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.marquee {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  background: oklch(16% 0.007 72 / 0.72);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: move 28s linear infinite;
+}
+.marquee span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 26px;
+  color: var(--gold-soft);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.section {
+  padding: clamp(72px, 9vw, 124px) 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+.section-header {
+  max-width: 780px;
+  margin-bottom: 36px;
+}
+.section-label {
+  color: var(--gold-soft);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.section-title {
+  margin-top: 12px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(38px, 6vw, 78px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+.section-copy {
+  margin-top: 18px;
+  color: var(--paper-soft);
+  max-width: 690px;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.65;
+}
+
+.agenda {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--line);
+  background: oklch(14% 0.006 72 / 0.72);
+}
+.agenda-item {
+  position: relative;
+  min-height: 230px;
+  padding: clamp(24px, 4vw, 38px);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.agenda-item:last-child { border-bottom: 0; }
+.agenda-num {
+  color: oklch(72% 0.105 78 / 0.25);
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(80px, 11vw, 140px);
+  line-height: 0.8;
+}
+.agenda-item h3 {
+  margin-top: 24px;
+  max-width: 480px;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.04;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+.agenda-item p {
+  margin-top: 14px;
+  max-width: 490px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.62;
+}
+.agenda-tag {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--gold-soft);
+  border: 1px solid var(--line-gold);
+  border-radius: 999px;
+  padding: 6px 11px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.hidden-word {
+  filter: blur(5px);
+  user-select: none;
+}
+
+.case-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.chart-stage {
+  border: 1px solid var(--line-gold);
+  background: oklch(12% 0.006 72);
+  overflow: hidden;
+  box-shadow: 0 34px 85px oklch(0% 0 0 / 0.46);
+}
+.chart-stage img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.94;
+  background: oklch(96% 0.006 72);
+}
+.chart-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 13px 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.oca-line {
+  display: grid;
+  gap: 10px;
+}
+.oca-step {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+.oca-step:first-child { border-top: 0; }
+.oca-step strong {
+  display: block;
+  color: var(--paper);
+  font-size: 20px;
+  line-height: 1.2;
+}
+.oca-step span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.58;
+}
+
+.proof-section {
+  padding: clamp(72px, 9vw, 116px) 0;
+  background:
+    linear-gradient(180deg, oklch(93% 0.012 76) 0%, oklch(86% 0.018 76) 100%);
+  color: oklch(17% 0.008 72);
+  overflow: hidden;
+}
+.proof-section .section-label { color: oklch(46% 0.075 75); }
+.proof-section .section-copy { color: oklch(30% 0.012 72); }
+.proof-river {
+  margin-top: 38px;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 16px 16px;
+  margin-left: max(16px, calc((100vw - 1220px) / 2));
+  scrollbar-color: oklch(48% 0.07 75) transparent;
+}
+.proof-shot {
+  flex: 0 0 min(72vw, 286px);
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 42px oklch(20% 0.01 72 / 0.20);
+  border: 1px solid oklch(22% 0.01 72 / 0.10);
+  background: oklch(93% 0.01 72);
+}
+.proof-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.room-panel {
+  border: 1px solid var(--line);
+  padding: clamp(24px, 4vw, 38px);
+  background: oklch(15% 0.008 72 / 0.72);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.room-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: oklch(72% 0.105 78 / 0.12);
+  border: 1px solid var(--line-gold);
+  margin-bottom: 28px;
+}
+.room-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.room-icon span {
+  color: var(--gold-soft);
+  font-size: 26px;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+.room-kicker {
+  color: var(--gold-soft);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.room-panel h3 {
+  font-size: clamp(23px, 3vw, 36px);
+  line-height: 1.05;
+  font-weight: 900;
+}
+.room-panel p {
+  margin-top: 13px;
+  color: var(--muted);
+  line-height: 1.62;
+  font-size: 15px;
+}
+.room-time {
+  margin-top: 24px;
+  display: grid;
+  gap: 9px;
+}
+.time-row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+.time-row strong {
+  color: var(--gold-soft);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.time-row span {
+  color: var(--paper-soft);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.final {
+  padding: clamp(72px, 9vw, 120px) 0 54px;
+}
+.final-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.final-copy h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(44px, 6.5vw, 88px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+.final-copy p {
+  margin-top: 18px;
+  max-width: 620px;
+  color: var(--paper-soft);
+  font-size: 18px;
+  line-height: 1.62;
+}
+.final-list {
+  margin-top: 28px;
+  display: grid;
+  gap: 12px;
+}
+.final-list div {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.52;
+}
+.final-list b { color: var(--gold-soft); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 86px;
+}
+.footer-inner {
+  color: var(--faint);
+  font-size: 11px;
+  line-height: 1.75;
+}
+.footer-inner a {
+  color: var(--muted);
+  margin-right: 14px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sticky-mobile {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold), var(--gold-soft));
+  color: var(--ink);
+  box-shadow: 0 16px 42px oklch(0% 0 0 / 0.42);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal[data-delay="1"] { transition-delay: 0.08s; }
+.reveal[data-delay="2"] { transition-delay: 0.16s; }
+.reveal[data-delay="3"] { transition-delay: 0.24s; }
+
+@media (min-width: 760px) {
+  .top-meta { display: inline-flex; }
+  .sticky-mobile { display: none; }
+  .hero { padding-top: 110px; }
+  .hero-benefits { grid-template-columns: 1fr 1fr; }
+  .proof-photo.side-b { display: block; }
+  .proof-photo.main { right: 10px; }
+  .proof-photo.side-a { left: -16px; }
+  .agenda {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .agenda-item {
+    min-height: 380px;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+  }
+  .agenda-item:last-child { border-right: 0; }
+  .case-layout {
+    grid-template-columns: 1fr;
+    gap: clamp(36px, 6vw, 72px);
+  }
+  .room-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .final-grid {
+    grid-template-columns: minmax(0, 0.95fr) 420px;
+    gap: 54px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .top-strip-inner { padding: 0 34px; }
+  .hero-copy { padding-top: clamp(42px, 7vh, 90px); }
+  .proof-collage {
+    transform: translateX(-12px);
+  }
+}
+
+@media (max-width: 759px) {
+  .top-strip-inner { min-height: 58px; }
+  .mark { font-size: 11px; gap: 8px; }
+  .mark-box { width: 29px; height: 29px; }
+  .nav-cta { display: none; }
+  .hero h1 { max-width: 96%; }
+  .hero-lead { max-width: 95%; }
+  .hero-benefit {
+    grid-template-columns: 92px 1fr;
+    min-height: 112px;
+    gap: 13px;
+  }
+  .benefit-visual {
+    width: 92px;
+    height: 78px;
+  }
+  .benefit-visual.icon img {
+    width: 52px;
+    height: 52px;
+  }
+  .proof-stack { min-height: 470px; }
+  .proof-collage { height: 470px; min-height: 470px; }
+  .floating-ticket {
+    left: 0;
+    top: 10px;
+  }
+  .proof-photo.main {
+    width: 245px;
+    right: -10px;
+    top: 94px;
+  }
+  .proof-photo.side-a {
+    width: 205px;
+    left: -12px;
+    bottom: 0;
+  }
+  .agenda-tag {
+    position: static;
+    width: fit-content;
+    margin-top: 22px;
+  }
+  .proof-section {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .section { padding-left: 0; padding-right: 0; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="top-strip">
+    <div class="top-strip-inner">
+      <div class="mark"><span class="mark-box">Z</span> Zenit Coaching</div>
+      <div class="top-meta"><span class="live-dot"></span> 4 Giugno · 21:00 · Zoom</div>
+      <a class="nav-cta" href="#registrazione">Registrati gratis</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <div class="kicker"><span class="live-dot"></span> Live gratuita · Giovedì 4 Giugno</div>
+          <h1>Un coach che guarda il tuo trade, il tuo <span>processo</span>, il tuo momento.</h1>
+          <p class="hero-lead">Non la risposta giusta in assoluto. <strong>La risposta giusta per te, in quel momento, su quel mercato.</strong> Il 4 giugno ti mostriamo come lavoriamo dentro Zenit quando il grafico si muove davvero.</p>
+          <div class="hero-actions">
+            <a class="primary-cta" href="#registrazione">Voglio partecipare live</a>
+            <p class="secondary-note">4 giugno · ore 21:00 · Zoom</p>
+          </div>
+          <div class="hero-benefits" aria-label="Cosa ricevi">
+            <div class="hero-benefit">
+              <div class="benefit-visual">
+                <img src="assets/mini-corso-zenit.svg" alt="Mini corso Zenit">
+              </div>
+              <div class="benefit-copy">
+                <strong>Mini corso su WhatsApp</strong>
+                <span>Se lasci il numero, lo ricevi dopo la registrazione.</span>
+              </div>
+            </div>
+            <div class="hero-benefit">
+              <div class="benefit-visual icon">
+                <img src="assets/telegram-icon.svg" alt="Telegram">
+              </div>
+              <div class="benefit-copy">
+                <strong>7 giorni nello Zeta Club</strong>
+                <span>Il link arriva solo se partecipi alla live.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Due Zenit Room al giorno</span>
+        <span>Microfono aperto</span>
+        <span>Domande in diretta</span>
+        <span>Protocollo OCA</span>
+        <span>Caso febbraio 2026</span>
+        <span>Una novità finale</span>
+        <span>Due Zenit Room al giorno</span>
+        <span>Microfono aperto</span>
+        <span>Domande in diretta</span>
+        <span>Protocollo OCA</span>
+        <span>Caso febbraio 2026</span>
+        <span>Una novità finale</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-header reveal">
+          <p class="section-label">Cosa succede il 4 giugno</p>
+          <h2 class="section-title">Ti portiamo nel punto che di solito resta fuori.</h2>
+          <p class="section-copy">Non guarderai una presentazione lucida costruita dopo. Vedrai come ragioniamo quando la fase è sporca, quando arrivano dubbi veri, quando la differenza non è sapere una regola ma restare nel processo.</p>
+        </div>
+
+        <div class="agenda">
+          <article class="agenda-item reveal" data-delay="1">
+            <div class="agenda-num">01</div>
+            <h3>Il caso di febbraio visto da dentro.</h3>
+            <p>Una fase difficile, decisioni prese in tempo reale, recupero e lucidità. Non per celebrare il risultato, ma per smontare il processo.</p>
+            <span class="agenda-tag">Caso reale</span>
+          </article>
+          <article class="agenda-item reveal" data-delay="2">
+            <div class="agenda-num">02</div>
+            <h3>Come funziona davvero una Zenit Room.</h3>
+            <p>DAX al mattino, NASDAQ al pomeriggio, microfono aperto, domande continue, interazione vera. Non segnali passivi.</p>
+            <span class="agenda-tag">Ogni giorno</span>
+          </article>
+          <article class="agenda-item reveal" data-delay="3">
+            <div class="agenda-num">03</div>
+            <h3>Un livello più diretto, mai aperto prima.</h3>
+            <p>Lo presentiamo solo durante la live. Qui basta sapere il punto: più vicinanza, più contesto, più intervento sul tuo momento operativo.</p>
+            <span class="agenda-tag">Nuovo livello</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap case-layout">
+        <div class="chart-stage reveal">
+          <img src="https://assets.cdn.filesafe.space/35opU1g13gqLiscdcXiS/media/69ad6534d130b9047ce444a1.webp" alt="Equity curve NASDAQ febbraio 2026">
+          <div class="chart-caption">
+            <span>NASDAQ · Febbraio 2026</span>
+            <span>Lo analizziamo in diretta, passaggio per passaggio.</span>
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <p class="section-label">Protocollo OCA</p>
+          <h2 class="section-title">Prima di cambiare strategia, devi capire cosa stai osservando.</h2>
+          <p class="section-copy">Il protocollo OCA standardizza la parte che molti lasciano al caso: osservazione, consapevolezza, azione. È qui che tecnica e mindset smettono di essere due mondi separati.</p>
+          <div class="oca-line">
+            <div class="oca-step">
+              <strong>Osservazione</strong>
+              <span>Cosa sta succedendo davvero nel mercato, nel piano, nella tua lettura.</span>
+            </div>
+            <div class="oca-step">
+              <strong>Consapevolezza</strong>
+              <span>Dove finisce il dato e dove inizia la reazione emotiva.</span>
+            </div>
+            <div class="oca-step">
+              <strong>Azione</strong>
+              <span>La scelta operativa che rispetta il contesto, non l'impulso del momento.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section">
+      <div class="wrap">
+        <div class="section-header reveal">
+          <p class="section-label">Prove dal campo</p>
+          <h2 class="section-title">Le persone non cercano un altro corso. Cercano un posto dove non devono decifrare tutto da sole.</h2>
+          <p class="section-copy">Questi non sono screenshot messi lì per promettere risultati. Sono tracce di ambiente: domande, recap, confronto, consapevolezza, lavoro quotidiano.</p>
+        </div>
+      </div>
+      <div class="proof-river reveal" data-delay="1" aria-label="Screenshot dalla community Zenit">
+        <figure class="proof-shot">
+          <img src="assets/story/story-01.png" alt="Messaggio community Zenit su gestione delle emozioni e consigli dei coach">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-02.png" alt="Messaggio community Zenit su domande in room e spiegazioni immediate">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-03.png" alt="Messaggio community Zenit sul vedere professionisti nelle fasi difficili">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-04.png" alt="Messaggio community Zenit sul ragionare insieme sui mercati">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-05.png" alt="Messaggio community Zenit sul cambio di approccio ai mercati">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-06.png" alt="Messaggio community Zenit su supporto e continuità">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-07.png" alt="Messaggio community Zenit su Tradingfulness e consapevolezza">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-08.png" alt="Messaggio community Zenit sugli schemi mentali condivisi">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-09.png" alt="Messaggio community Zenit su Tradingfulness e protocollo OCA">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-10.png" alt="Messaggio community Zenit su mental coaching e ambiente">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-11.png" alt="Messaggio community Zenit su emozioni e coach">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-12.png" alt="Messaggio community Zenit su errori, emotività e supporto">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-13.png" alt="Messaggio community Zenit sul ragionare con professionisti">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-14.png" alt="Messaggio community Zenit su qualità tecnica e community">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-15.png" alt="Messaggio community Zenit su live con coach Simone e colleghi">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-16.png" alt="Messaggio community Zenit su disciplina e contesto operativo">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-17.png" alt="Recap settimanale NASDAQ con analisi degli errori">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-18.png" alt="Trade recap condiviso nella community Zenit">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-19.png" alt="Trade recap Zenit su progresso e consapevolezza">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-20.png" alt="Messaggio community Zenit su valore del lavoro mentale">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-21.png" alt="Messaggio community Zenit su rischio, metodo e tranquillità operativa">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-22.png" alt="Messaggio community Zenit su prop firm superata con focus su piano e supporto">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-23.png" alt="Messaggio community Zenit su piano e winrate">
+        </figure>
+        <figure class="proof-shot">
+          <img src="assets/story/story-24.png" alt="Messaggio community Zenit su risultato e team">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-header reveal">
+          <p class="section-label">Perché esserci live</p>
+          <h2 class="section-title">Registrarsi non basta. La differenza la vedi se ci sei.</h2>
+          <p class="section-copy">Chi partecipa in diretta riceve il link per provare una settimana dentro lo Zeta Club: room, community, ritmo quotidiano.</p>
+        </div>
+        <div class="room-grid">
+          <div class="room-panel reveal" data-delay="1">
+            <div>
+              <div class="room-icon"><img src="assets/telegram-icon.svg" alt=""></div>
+              <p class="room-kicker">Solo presenti live</p>
+              <h3>7 giorni nello Zeta Club.</h3>
+              <p>Il link arriva durante la serata. Se ci sei, entri per una settimana e vedi il ritmo quotidiano da dentro.</p>
+            </div>
+            <div class="room-time">
+              <div class="time-row"><strong>08:50</strong><span>Trading Room DAX</span></div>
+              <div class="time-row"><strong>15:15</strong><span>Trading Room NASDAQ</span></div>
+            </div>
+          </div>
+          <div class="room-panel reveal" data-delay="2">
+            <div>
+              <div class="room-icon"><span>+</span></div>
+              <p class="room-kicker">Novità finale</p>
+              <h3>Un nuovo pezzo del percorso.</h3>
+              <p>Prima ti facciamo vedere il lavoro da dentro. Poi ti mostriamo il prossimo livello per chi vuole vivere Zenit più da vicino.</p>
+            </div>
+            <div class="room-time">
+              <div class="time-row"><strong>Live</strong><span>contesto prima, proposta dopo</span></div>
+              <div class="time-row"><strong>Q&A</strong><span>domande aperte a fine serata</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap final-grid">
+        <div class="final-copy reveal">
+          <h2>Entra nella live del 4 giugno.</h2>
+          <p>Metodo, room, caso di febbraio e nuovo livello finale. Una sera per vedere Zenit da dentro.</p>
+          <div class="final-list">
+            <div><b>•</b><span>Zoom live: 4 giugno, 21:00.</span></div>
+            <div><b>•</b><span>Mini corso su WhatsApp.</span></div>
+            <div><b>•</b><span>7 giorni Zeta Club se sei live.</span></div>
+          </div>
+        </div>
+
+        <aside class="quick-form reveal" data-delay="1" id="registrazione" aria-label="Registrazione live finale">
+          <div class="form-top">
+            <h2>Blocca il link Zoom</h2>
+            <div class="form-chip">4 Giugno</div>
+          </div>
+          <form id="launch-form-final">
+            <div class="field">
+              <label class="lbl" for="name-final">Nome</label>
+              <input id="name-final" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="lbl" for="email-final">Email</label>
+              <input id="email-final" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label class="lbl" for="whatsapp-final">WhatsApp (opzionale)</label>
+              <input id="whatsapp-final" name="whatsapp" type="tel" autocomplete="tel">
+              <p class="hint">Mini corso su WhatsApp.</p>
+            </div>
+            <label class="legal-row">
+              <input id="legal-final" name="legal" type="checkbox" required>
+              <span>Accetto <a href="https://zenitcoach.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> e <a href="https://zenitcoach.com/note-legali" target="_blank" rel="noopener">Note Legali</a>.</span>
+            </label>
+            <button id="submit-btn-final" class="submit-btn" type="submit">Voglio il link Zoom</button>
+            <p id="form-status-final" class="form-status" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p style="margin-bottom:7px">
+        <a href="https://zenitcoach.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://zenitcoach.com/note-legali" target="_blank" rel="noopener">Note Legali</a>
+      </p>
+      <p>© Copyright Zenit Coaching LLC. Tutti i diritti riservati. Zenit Coaching LLC, 4405 Jager Dr Ne, Ste C4-4433 Rio Rancho, NM 87144.</p>
+      <p style="margin-top:5px">Questo sito non fa parte del sito web di Facebook o Meta Platforms Inc. e non è in alcun modo approvato da Facebook.</p>
+    </div>
+  </footer>
+
+  <a class="sticky-mobile" href="#registrazione">Registrati alla live gratis</a>
+</div>
+
+<script>
+(function () {
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -36px 0px" });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+(function () {
+  var WEBHOOK = "https://hook.eu2.make.com/exnitineow5amklge1lr7ldsf4647d7k";
+  var THANKYOU = "thank-you-zeta-club-plus.html";
+
+  function param(key) {
+    return new URLSearchParams(window.location.search).get(key) || "";
+  }
+
+  function wireForm(config) {
+    var form = document.getElementById(config.form);
+    if (!form) return;
+    var btn = document.getElementById(config.button);
+    var status = document.getElementById(config.status);
+    var nameInput = document.getElementById(config.name);
+    var emailInput = document.getElementById(config.email);
+    var whatsappInput = document.getElementById(config.whatsapp);
+    var legalInput = document.getElementById(config.legal);
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      status.textContent = "";
+
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+      var whatsapp = whatsappInput.value.trim();
+      var legal = legalInput.checked;
+
+      if (!name || !email || !legal) {
+        status.textContent = "Compila nome, email e accettazione legale.";
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "Registrazione in corso...";
+
+      var payload = {
+        event: "zeta_club_plus_launch_registration",
+        page: "landing_zeta_club_plus_2026_06_04_v2",
+        form_position: config.position,
+        name: name,
+        email: email,
+        whatsapp: whatsapp,
+        whatsapp_optin: Boolean(whatsapp),
+        privacy_accepted: legal,
+        legal_terms_accepted: legal,
+        source: param("source"),
+        utm_source: param("utm_source"),
+        utm_medium: param("utm_medium"),
+        utm_campaign: param("utm_campaign"),
+        utm_content: param("utm_content"),
+        utm_term: param("utm_term"),
+        registered_at: new Date().toISOString(),
+        event_date: "2026-06-04T21:00:00+02:00"
+      };
+
+      try {
+        var response = await fetch(WEBHOOK, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        var text = await response.text();
+        if (!response.ok && text.trim() !== "200") throw new Error();
+
+        var url = new URL(THANKYOU, window.location.href);
+        url.searchParams.set("email", email);
+        if (whatsapp) url.searchParams.set("wa", "1");
+        window.location.href = url.toString();
+      } catch (_) {
+        btn.disabled = false;
+        btn.textContent = config.originalText;
+        status.textContent = "Registrazione non riuscita. Riprova tra qualche secondo.";
+      }
+    });
+  }
+
+  wireForm({
+    form: "launch-form-final",
+    button: "submit-btn-final",
+    status: "form-status-final",
+    name: "name-final",
+    email: "email-final",
+    whatsapp: "whatsapp-final",
+    legal: "legal-final",
+    position: "final",
+    originalText: "Voglio il link Zoom"
+  });
+})();
+</script>
+</body>
+</html>

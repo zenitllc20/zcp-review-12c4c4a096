@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Telegram</title>
+  <desc id="desc">Icona Telegram semplice in stile Zenit.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#9a7540"/>
+      <stop offset="0.52" stop-color="#ca9d5d"/>
+      <stop offset="1" stop-color="#e0be82"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="238" fill="#0d0b09" stroke="#ca9d5d" stroke-width="18"/>
+  <path d="M397 151 335 379c-5 18-18 23-34 14l-92-68-45 43c-5 5-9 9-19 9l7-96 175-158c8-7-2-11-12-4L99 255c-17 11-17 28 4 34l90 28 210-132c16-10 31-4 24 16Z" fill="url(#gold)"/>
+</svg>

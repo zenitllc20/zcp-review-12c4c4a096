@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Mini corso Zenit</title>
+  <desc id="desc">Cover visuale per il mini corso Zenit su DAX e NASDAQ.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b0a08"/>
+      <stop offset="0.58" stop-color="#17130d"/>
+      <stop offset="1" stop-color="#0d0b09"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#9a7540"/>
+      <stop offset="0.52" stop-color="#ca9d5d"/>
+      <stop offset="1" stop-color="#e0be82"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.22" cy="0.12" r="0.8">
+      <stop offset="0" stop-color="#ca9d5d" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ca9d5d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" rx="52" fill="url(#bg)"/>
+  <rect width="1200" height="800" rx="52" fill="url(#glow)"/>
+
+  <g opacity="0.18">
+    <path d="M0 620 C120 560 185 650 302 592 S496 498 620 542 780 696 912 608 1086 486 1200 532" fill="none" stroke="#e0be82" stroke-width="3"/>
+    <path d="M0 505 C128 468 225 535 332 477 S522 388 655 424 805 533 940 463 1084 375 1200 410" fill="none" stroke="#ca9d5d" stroke-width="2"/>
+    <path d="M0 390 C150 338 250 438 382 370 S572 258 712 306 850 430 996 334 1102 278 1200 292" fill="none" stroke="#e0be82" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(76 64)">
+    <rect x="0" y="0" width="86" height="86" rx="22" fill="url(#gold)"/>
+    <text x="43" y="57" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="42" font-weight="900" fill="#0a0a0a">Z</text>
+    <text x="108" y="35" font-family="DM Sans, Arial, sans-serif" font-size="20" font-weight="900" letter-spacing="5" fill="#e0be82">ZENIT</text>
+    <text x="108" y="65" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="3" fill="#857b6f">MINI CORSO</text>
+  </g>
+
+  <g transform="translate(76 210)">
+    <text font-family="DM Sans, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="4" fill="#ca9d5d">DAX + NASDAQ</text>
+    <text y="108" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="400" fill="#ecebe9">Le strategie</text>
+    <text y="196" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="400" fill="#ecebe9">che usiamo</text>
+    <text y="282" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-style="italic" font-weight="400" fill="#e0be82">in room.</text>
+  </g>
+
+  <g transform="translate(720 170)" filter="url(#shadow)">
+    <rect width="380" height="460" rx="34" fill="#11100e" stroke="#ca9d5d" stroke-opacity="0.45"/>
+    <rect x="34" y="42" width="312" height="206" rx="18" fill="#070707"/>
+    <path d="M52 208 L104 177 L146 190 L202 132 L247 152 L303 82 L346 104" fill="none" stroke="#ca9d5d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M52 208 L104 177 L146 190 L202 132 L247 152 L303 82 L346 104 L346 248 L52 248 Z" fill="#ca9d5d" opacity="0.13"/>
+    <g transform="translate(34 286)">
+      <rect width="312" height="34" rx="17" fill="#1d1a15"/>
+      <rect y="56" width="254" height="34" rx="17" fill="#1d1a15"/>
+      <rect y="112" width="292" height="34" rx="17" fill="#1d1a15"/>
+    </g>
+  </g>
+
+  <g transform="translate(76 680)">
+    <rect width="312" height="52" rx="26" fill="#ca9d5d" opacity="0.18" stroke="#ca9d5d" stroke-opacity="0.4"/>
+    <text x="156" y="34" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2" fill="#e0be82">SUBITO DOPO LA REGISTRAZIONE</text>
+  </g>
+</svg>
